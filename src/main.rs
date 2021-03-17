@@ -9,25 +9,34 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read input.");
 
-    let days : u128 = match input.trim().parse() {
+    let days: u128 = match input.trim().parse() {
         Ok(num) => num,
         Err(_) => 1,
     };
 
-    let mut sum : u128 = 0;
-    let mut total : u128 = 0;
+    let mut sum: u128 = 0;
+    let mut total: u128 = 0;
     let mut index = 0;
-    while index < days+1 {
+    while index < days + 1 {
         sum += index;
         total += sum;
-        
+
         index += 1;
     }
-    println!("The total number of gifts you would receive on the last day is {}.", sum);
+    println!(
+        "The total number of gifts you would receive on the last day is {}.",
+        sum
+    );
 
     if days == 1 {
-        println!("The sum total number of gifts received over {} day is {}.", days, total);
+        println!(
+            "The sum total number of gifts received over {} day is {}.",
+            days, total
+        );
     } else {
-        println!("The sum total number of gifts received over {} days is {}.", days, total);
+        println!(
+            "The sum total number of gifts received over {} days is {}.",
+            days, total
+        );
     }
 }
