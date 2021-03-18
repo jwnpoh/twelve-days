@@ -1,7 +1,9 @@
 use std::io;
 
 fn main() {
-    println!("How many days of Christmas is your true love gifting you gifts for?");
+    let qn = String::from("How many days of Christmas is your true love gifting you gifts for?");
+    println!("{}", &qn);
+    // println!("How many days of Christmas is your true love gifting you gifts for?");
 
     let mut input = String::new();
 
